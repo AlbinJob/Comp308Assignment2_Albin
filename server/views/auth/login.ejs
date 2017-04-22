@@ -1,0 +1,36 @@
+<!--header -->
+<% include ../partials/header.ejs %>
+
+<!--Login page  -->
+
+ <div class="loginPage">
+<main class="container">
+     <% if (messages.length > 0) { %>
+        <div class="alert alert-danger"><%= messages %></div>
+      <% } %>
+      <div class="loginpage">
+        <div class="col-xs-12 col-md-8">
+           <h1>Please Login</h1>
+           <form method="post">
+                <fieldset class="form-group">
+                    <label>Username:</label>
+                    <input type="text" class="form-control" name="username" required autofocus/>
+                 </fieldset>
+                 <fieldset class="form-group">
+                    <label>Password:</label>
+                    <input type="password" class="form-control" name="password" required/>
+                    or <a href="/register">Register</a>
+                </fieldset>
+                <fieldset class="form-group text-right">
+                    <input type="submit" class="btn btn-primary" value="Log In"/>
+                    <a href="/">
+                        <input type="button" class="btn btn-warning" value="Cancel"/>
+                    </a>
+               </fieldset>
+            </form>
+         </div>
+      </div>
+      </div>
+    </main>
+<!-- footer -->
+<% include ../partials/footer.ejs %>
